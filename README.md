@@ -55,6 +55,12 @@ class TestnetTestServerHandler(BaseHTTPServer.BaseHTTPRequestHandler):
       
     return self.send_response(404)
 
+def test(HandlerClass = TestnetTestServerHandler,
+    ServerClass = BaseHTTPServer.HTTPServer):
+  BaseHTTPServer.test(HandlerClass, ServerClass)
+
+if __name__ == '__main__':
+  test()
 ```
 
 ```
